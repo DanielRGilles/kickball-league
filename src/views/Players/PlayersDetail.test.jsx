@@ -1,8 +1,18 @@
-import { render } from '@testing-library/react'
-import PlayersDetail from './PlayersDetail'
+import { render, screen } from '@testing-library/react';
+import { MemoryRouter, Route } from 'react-router-dom';
+import PlayersDetail from './PlayersDetail.jsx';
 
-it('Should fetch then render a specific player', async () => {
+it('should render a detailed view of an individual team', () => {
+  render(
+    <MemoryRouter initialEntries={['/players/7']} >
+      <Route path="/players/:id" >
+       <PlayersDetail/>
+       </Route>
+   </MemoryRouter>
+  );
+
+  screen.getByText( 'Loading', {
+    exact: false,
+  });
   
-    const { container } = await render(<PlayersDetail />)
-  expect(container).toMatchSnapshot()
-})
+});

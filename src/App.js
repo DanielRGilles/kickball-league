@@ -30,12 +30,7 @@ export default function App() {
         </nav>
         <Switch>
           <Route exact path="/teams" component={Teams}/>
-          <Route
-            path='/teams/:id'
-            render={(routerProps) => (
-              <TeamsDetail label='Team Details Label' {...routerProps} />
-            )}
-          />
+          <Route exact path="/teams/:id" component={TeamsDetail  }/>
           <Route exact path="/players"
             component={Players} />
           <Route exact path="/players/:id"
