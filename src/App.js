@@ -14,8 +14,8 @@ import TeamsDetail from './views/Teams/TeamsDetail';
 export default function App() {
   return (
     <Router>
-      <div>
-        <nav>
+      <div className='main-cnt'>
+        <nav className='top-bar'>
           <ul>
             <li>
               <NavLink to="/">Home</NavLink>

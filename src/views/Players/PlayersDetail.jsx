@@ -16,7 +16,7 @@ export default function PlayersDetail() {
     if (loading) return <h1>Loading player...</h1>
     return (
         <div>
-            <div>{player.name}</div>
+            <h1>{player.name}</h1>
             <div>{player.position}</div>
             
         </div>

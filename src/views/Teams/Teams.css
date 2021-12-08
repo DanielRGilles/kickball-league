@@ -1,0 +1,8 @@
+li {
+    
+    list-style: none;
+}
+.player {
+    padding-left: 15px;
+    font-weight: 700;
+}
