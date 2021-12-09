@@ -14,8 +14,8 @@ import TeamsDetail from './views/Teams/TeamsDetail';
 export default function App() {
   return (
     <Router>
-      <div>
-        <nav>
+      <div className='main-cnt'>
+        <nav className='top-bar'>
           <ul>
             <li>
               <NavLink to="/">Home</NavLink>
@@ -29,21 +29,14 @@ export default function App() {
           </ul>
         </nav>
         <Switch>
-          <Route path="/teams">
-            <Teams />
-          </Route>
-          <Route path="/teams/:id">
-            <TeamsDetail />
-          </Route>
-          <Route path="/players">
-            <Players />
-          </Route>
-          <Route path="/players/:id">
-            <PlayersDetail />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+          <Route exact path="/teams" component={Teams}/>
+          <Route exact path="/teams/:id" component={TeamsDetail  }/>
+          <Route exact path="/players"
+            component={Players} />
+          <Route exact path="/players/:id"
+            component={PlayersDetail} />
+          <Route exact path="/" component={Home}/>
+            
         </Switch>
       </div>
     </Router>
