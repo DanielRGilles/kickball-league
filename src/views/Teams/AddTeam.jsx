@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
+import { createTeam } from'../../services/teams.jsx'
 
 export default function AddTeam() {
     const [ name, setName ] = useState()
@@ -17,12 +18,13 @@ export default function AddTeam() {
          <fieldset>
         <legend>Add Team</legend>     
         <form onSubmit={handleSubmit}>
-            <label>Name</label>
-            <input id='name' name='name' type="text" />
-            <label>City</label>
-            <input type="text" />
-            <label>State</label>
-            <input type="text" />
+            <label htmlFor='name' >Name:</label>
+            <input id='name' name='name' type="text" value={name} onChange={(e) => setName(e.target.value)} />
+            <label htmlFor='city' >city:</label>
+            <input id='city' name='city' type="text" value={city} onChange={(e) => setCity(e.target.value)} />
+            <label htmlFor='state' >state:</label>
+            <input id='state' name='state' type="text" value={state} onChange={(e) => setState(e.target.value)} />
+           
             <button type='submit'>Add Team </button>
         </form>
         </fieldset>   

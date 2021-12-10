@@ -10,6 +10,8 @@ import Players from './views/Players/Players';
 import Home from './views/Home';
 import PlayersDetail from './views/Players/PlayersDetail';
 import TeamsDetail from './views/Teams/TeamsDetail';
+import AddTeam from "./views/Teams/AddTeam";
+import EditTeam from "./views/Teams/EditTeam";
 
 export default function App() {
   return (
@@ -29,6 +31,8 @@ export default function App() {
           </ul>
         </nav>
         <Switch>
+        <Route path="/teams/new" component={AddTeam} />
+        <Route path="/teams/:id/edit" component={EditTeam} />
           <Route exact path="/teams" component={Teams}/>
           <Route exact path="/teams/:id" component={TeamsDetail  }/>
           <Route exact path="/players"
