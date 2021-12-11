@@ -6,12 +6,12 @@ it('should render a detailed view of an individual team', () => {
   render(
     <MemoryRouter initialEntries={['/teams/3']} >
       <Route path="/teams/:id" >
-       <TeamsDetail/>
-       </Route>
-   </MemoryRouter>
+        <TeamsDetail/>
+      </Route>
+    </MemoryRouter>
   );
 
-  screen.getByText( 'Loading', {
+  screen.getByText('Loading', {
     exact: false,
   });
   

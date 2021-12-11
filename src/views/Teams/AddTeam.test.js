@@ -5,7 +5,7 @@ import { Route, Router } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
 import { createMemoryHistory } from 'history';
 import AddTeam from './AddTeam';
-import TeamDetail from './TeamDetail';
+import TeamsDetail from './TeamsDetail';
 
 const mockTeam = {
   id: 6,
@@ -48,7 +48,7 @@ it('should add a team and redirect to the team detail page', async () => {
       <Route path='/teams/new'>
         <AddTeam />
       </Route>
-      <Route path='/teams/:id' component={TeamDetail} />
+      <Route path='/teams/:id' component={TeamsDetail} />
     </Router>
   );
 
