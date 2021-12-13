@@ -25,7 +25,7 @@ export default function AddTeam() {
           <label htmlFor='state' >state:</label>
           <input id='state' name='state' type="text" value={state} onChange={(e) => setState(e.target.value)} />
            
-          <button type='submit'>Add Team </button>
+          <button type='submit'>Add a Team </button>
         </form>
       </fieldset>   
     </>
