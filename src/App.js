@@ -3,13 +3,17 @@ import {
   Switch,
   Route,
   NavLink
-} from "react-router-dom";
+} from 'react-router-dom';
 import './App.css';
 import Teams from './views/Teams/Teams';
 import Players from './views/Players/Players';
 import Home from './views/Home';
 import PlayersDetail from './views/Players/PlayersDetail';
 import TeamsDetail from './views/Teams/TeamsDetail';
+import AddTeam from './views/Teams/AddTeam';
+import EditTeam from './views/Teams/EditTeam';
+import AddPlayer from './views/Players/AddPlayer';
+import EditPlayer from './views/Players/EditPlayer';
 
 export default function App() {
   return (
@@ -29,8 +33,12 @@ export default function App() {
           </ul>
         </nav>
         <Switch>
+          <Route path="/teams/new" component={AddTeam} />
+          <Route path="/players/new" component={AddPlayer} />
+          <Route path="/teams/:id/edit" component={EditTeam} />
+          <Route path="/players/:id/edit" component={EditPlayer} />
           <Route exact path="/teams" component={Teams}/>
-          <Route exact path="/teams/:id" component={TeamsDetail  }/>
+          <Route exact path="/teams/:id" component={TeamsDetail }/>
           <Route exact path="/players"
             component={Players} />
           <Route exact path="/players/:id"
