@@ -11,7 +11,6 @@ export default function TeamsDetail() {
   useEffect(() => {
     getTeamById(id)
       .then((data) => setTeam(data))
-      .catch((error) => console.error(error))
       .finally(() => setLoading(false));
   }, [id]);
 

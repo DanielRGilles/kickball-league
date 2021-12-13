@@ -11,7 +11,6 @@ export default function Players() {
   const loadPlayers = async () => {
     getPlayers()
       .then((data) => setPlayers(data))
-      .catch((error) => console.error(error))
       .finally(() => setLoading(false));
   };
 

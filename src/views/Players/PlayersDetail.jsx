@@ -10,7 +10,6 @@ export default function PlayersDetail() {
   useEffect(() => {
     getPlayerById(id)
       .then((data) => setPlayer(data))
-      .catch((error) => console.error(error))
       .finally(() => setLoading(false));
   }, [id]);
   if (loading) return <h1>Loading player...</h1>;
